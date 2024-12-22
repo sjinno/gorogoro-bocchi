@@ -9,7 +9,6 @@ lerna-debug.log*
 
 node_modules
 dist
-dist-*
 *.local
 
 # Editor directories and files
@@ -27,3 +26,5 @@ dist-*
 .webextrc
 .webextrc.*
 
+dist-*
+public
