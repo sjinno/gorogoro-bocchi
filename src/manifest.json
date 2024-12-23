@@ -28,7 +28,7 @@
 
   "{{chrome}}.web_accessible_resources": [
     {
-      "resources": ["style.css", "bocchi-the-rock-bocchi-the-rock-gif.gif"],
+      "resources": ["assets/*"],
       "matches": ["<all_urls>"]
     }
   ]

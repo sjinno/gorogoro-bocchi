@@ -4,12 +4,16 @@ import gorogoroBocchi from "../assets/bocchi-the-rock-bocchi-the-rock-gif.gif";
 
 export default function () {
   useEffect(() => {
-    console.log("Hello from the popup!");
+    console.log("Hello frm the popup!");
   }, []);
+
+  const handleClick = () => {
+    alert("Bocchi Time!");
+  };
 
   return (
     <div>
-      <img src={gorogoroBocchi} />
+      <button onClick={handleClick}>Bocchi Time!</button>
     </div>
   );
 }

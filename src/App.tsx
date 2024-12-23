@@ -2,7 +2,7 @@ import "./index.css";
 import browser from "webextension-polyfill";
 
 const bocchiUrl = browser.runtime.getURL(
-  "bocchi-the-rock-bocchi-the-rock-gif.gif"
+  "assets/bocchi-the-rock-bocchi-the-rock-gif.gif"
 );
 
 function App() {

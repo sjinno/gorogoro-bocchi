@@ -30,7 +30,7 @@ export function injectReact(elt: JSX.Element) {
 
 function injectTailwindCSS(shadowRoot: ShadowRoot) {
   // Fetch the Tailwind CSS file
-  fetch(browser.runtime.getURL("style.css"))
+  fetch(browser.runtime.getURL("assets/tailwind.css"))
     .then((response) => response.text()) // Read the content as text
     .then((css) => {
       // Replace :root with :host for Shadow DOM scoping

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && pnpm run build:all",
+    "build": "tsc && pnpm run build:css && pnpm run build:all",
+    "build:css": "tailwindcss -i ./src/index.css -o ./public/assets/tailwind.css --minify",
     "build:chrome": "vite build",
     "build:firefox": "TARGET=firefox vite build",
     "build:all": "pnpm run build:chrome && pnpm run build:firefox"
