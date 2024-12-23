@@ -48,4 +48,17 @@ function injectTailwindCSS(shadowRoot: ShadowRoot) {
     });
 }
 
-injectReact(<App />);
+function injectReactApp() {
+  injectReact(<App />);
+}
+
+// Listener for messages from the popup script
+browser.runtime.onMessage.addListener(
+  (request, _sender, sendResponse: ({}) => void) => {
+    if (request.action === "bocchiTime") {
+      injectReactApp();
+      sendResponse({ success: true });
+    }
+    return true; // Indicates async response
+  }
+);
